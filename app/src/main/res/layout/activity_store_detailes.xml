@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".avtivities.StoreDetailes">
+
+
+    <RelativeLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/banner"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/shape_layout"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        android:background="@drawable/circle_image"
+        android:layout_marginStart="20dp"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="170dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCardView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+            <ImageView
+                android:id="@+id/roundedimag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Store Name"
+        android:layout_below="@+id/shape_layout"
+        android:textSize="20sp"
+        android:layout_margin="15dp"
+        />
+    <TextView
+        android:id="@+id/store_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="400"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/image_container"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="70dp"
+
+        android:layout_toRightOf="@+id/store_love"
+        />
+
+    <ImageView
+        android:id="@+id/store_love"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/image_container"
+        android:layout_toLeftOf="@+id/store_location"
+        android:src="@drawable/heart_disabled_logo"/>
+    <TextView
+        android:id="@+id/store_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/store_likes"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="70dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageView
+        android:id="@+id/store_location_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/store_love"
+        android:layout_toLeftOf="@+id/store_location"
+        android:src="@drawable/ic_map"/>
+
+    <LinearLayout
+        android:id="@+id/storeDetail_fragment_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/store_name"
+        android:background="#fff">
+        <Button
+            android:id="@+id/storeDetail_btn_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Products"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:background="@color/purple_500"/>
+        <Button
+            android:id="@+id/storeDetail_btn_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Description"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:background="#fff"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/storeDetail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/storeDetail_fragment_buttons"
+        />
+
+
+
+
+
+
+
+
+</RelativeLayout>

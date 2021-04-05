@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item-->
+    <!--        android:id="@+id/optionSignOut"-->
+    <!--        android:title="Sign out"-->
+    <!--        />-->
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_myOrders"
+            android:icon="@drawable/ic_cart"
+            android:title="My Orders" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+
+        <item
+            android:id="@+id/nav_myProfilee"
+            android:icon="@drawable/user"
+            android:title="My Profile" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
+        <item
+            android:id="@+id/nav_offers"
+            android:icon="@drawable/discount"
+            android:title="Offers and Discounts" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group5">
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="Help and Support" />
+    </group>
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group6">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log out" />
+    </group>
+
+
+</menu>

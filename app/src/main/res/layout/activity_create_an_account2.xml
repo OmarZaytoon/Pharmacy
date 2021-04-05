@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".avtivities.CreateAnAccount2"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/purple_500"
+        android:textSize="50dp"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <EditText
+            android:inputType="textImeMultiLine"
+            android:id="@+id/createAccount2_et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:drawableTint="#FF4956"
+            android:padding="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@drawable/user"
+            android:background="@drawable/edittext_borders_layout"
+
+            />
+        <EditText
+            android:id="@+id/createAccount2_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:padding="15dp"
+            android:layout_margin="20dp"
+            android:inputType="textPassword"
+            android:drawableTint="#FF4956"
+            android:drawableEnd="@drawable/password"
+            android:background="@drawable/edittext_borders_layout"
+            android:layout_below="@+id/createAccount2_et_username"/>
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/createAccount2_et_confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm password"
+            android:padding="15dp"
+            android:drawableTint="#FF4956"
+            android:layout_margin="20dp"
+            android:drawableEnd="@drawable/password"
+            android:background="@drawable/edittext_borders_layout"
+            android:layout_below="@+id/createAccount2_et_password"/>
+        <Button
+            android:id="@+id/creatAccount2_btn_createAccount"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create an account"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/buttons_borders_layout"
+            android:layout_marginBottom="15dp"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/createAccount2_et_confirmPassword"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By signing up you agree to our terms and privacy policy"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        ></TextView>
+</RelativeLayout>

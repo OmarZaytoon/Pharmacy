@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:layout_marginBottom="50dp">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/menu_header"
+            app:itemTextColor="#111"
+            app:menu="@menu/options_menu" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar">
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar" />
+
+                    <TextView
+                        android:id="@+id/see_all_categories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/toolbar"
+                        android:textColor="#2196F3"
+                        android:text="See All"
+                        android:layout_alignParentRight="true"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/home_tv_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Shop by Category"
+                        android:layout_below="@+id/toolbar"
+                        android:textColor="#111"
+                        android:textSize="20sp"
+                        android:fontFamily="monospace"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/category_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_tv_category"
+                        tools:listitem="@layout/categories_list_item" />
+
+                    <TextView
+                        android:id="@+id/see_all_offers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_rv"
+                        android:textColor="#2196F3"
+                        android:text="See All"
+                        android:layout_alignParentRight="true"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/home_tv_deals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_rv"
+                        android:layout_margin="10dp"
+                        android:text="Deals and Offers"
+                        android:textColor="#111"
+                        android:textSize="20sp"
+                        android:fontFamily="monospace"/>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/deals_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_tv_deals"
+                        tools:listitem="@layout/deals_list_item" />
+
+                    <TextView
+                        android:id="@+id/see_all_stores"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deals_rv"
+                        android:textColor="#2196F3"
+                        android:text="See All"
+                        android:layout_alignParentRight="true"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/home_tv_vitamins_supp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deals_rv"
+                        android:layout_margin="10dp"
+                        android:text="Vitamins Supplement"
+                        android:textColor="#111"
+                        android:textSize="20sp"
+                        android:fontFamily="monospace"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/stores_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_tv_vitamins_supp"
+                        tools:listitem="@layout/stores_list_item" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/stores_rv"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="20dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/purple_500"
+                            >
+
+                            <ImageView
+                                android:id="@+id/cv_img1"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/delivery"
+                                android:layout_alignParentStart="true"/>
+                            <TextView
+                                android:id="@+id/cv_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="We will deliver your medicine"
+                                android:textColor="#fff"
+                                android:layout_marginTop="20dp"
+                                android:layout_toEndOf="@+id/cv_img1"
+                                android:textSize="25sp"/>
+                            <Button
+                                android:id="@+id/home_buy_now"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BUY NOW"
+                                android:textColor="#111"
+                                android:layout_below="@+id/cv_text"
+                                android:layout_alignParentEnd="true"
+                                android:backgroundTint="#fff"
+                                android:layout_marginEnd="90dp"
+                                />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+        </ScrollView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</FrameLayout>

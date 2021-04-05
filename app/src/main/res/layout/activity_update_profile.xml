@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".avtivities.UpdateProfile"
+    android:padding="15dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/userprofile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+    <ImageView
+        android:id="@+id/profile_add_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add_photo"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="-27dp"
+        />
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mamoun Ahmad"
+        android:textColor="#111"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:textSize="20sp"
+        android:layout_below="@+id/profile_name"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/profile_et_number1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/profile_contact_number"
+        android:text="0799210376"
+
+        />
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20sp"
+        android:layout_below="@+id/profile_et_number1"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/profile_et_email1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/profile_email"
+        android:text="mamounahmad445@gmail.com"
+
+        />
+
+    <TextView
+        android:id="@+id/profile_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="20sp"
+        android:layout_below="@+id/profile_et_email1"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/profile_et_address1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@+id/profile_address"
+        android:text="Amman, Jordan"
+
+        />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@+id/profile_et_address1"
+        android:layout_margin="20dp"
+        android:background="@drawable/buttons_borders_layout"/>
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

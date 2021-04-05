@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF4956"
+    android:elevation="4dp">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search a product"
+        android:inputType="textFilter"
+        android:background="@drawable/buttons_borders_layout"/>
+</androidx.appcompat.widget.Toolbar>

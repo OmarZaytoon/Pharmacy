@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CartFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/cart_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pill"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:layout_below="@+id/cart_img"
+            android:text="You haven't add anything to order list"
+            android:textColor="#111"
+            android:textSize="25sp"
+            android:visibility="gone"/>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/cart_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_search"
+            android:layout_above="@+id/cart_checkout"
+            android:layout_marginBottom="10dp"
+            />
+        <RelativeLayout
+            android:id="@+id/cart_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:background="#fff">
+            <Button
+                android:id="@+id/cart_order"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Check out"
+                android:textColor="#fff"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/buttons_borders_layout"/>
+            <TextView
+                android:id="@+id/total_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total :"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/fragment_cart_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.90"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:layout_toEndOf="@+id/total_text"
+
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

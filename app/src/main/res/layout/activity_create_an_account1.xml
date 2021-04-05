@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".avtivities.CreateAnAccount1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/purple_500"
+            android:textSize="50dp"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/createAccount1_et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:drawableTint="#FF4956"
+                    android:padding="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:drawableEnd="@drawable/user"
+                    android:background="@drawable/edittext_borders_layout"
+
+                    />
+                <EditText
+                    android:id="@+id/createAccount1_et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:padding="15dp"
+                    android:layout_margin="20dp"
+                    android:drawableTint="#FF4956"
+                    android:inputType="phone"
+                    android:drawableEnd="@drawable/ic_baseline_phone"
+                    android:background="@drawable/edittext_borders_layout"
+                    android:layout_below="@+id/creatAccount1_et_email"/>
+                <Button
+                    android:id="@+id/creatAccount1_btn_next"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="next"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/buttons_borders_layout"
+                    android:layout_marginBottom="15dp"
+                    android:layout_margin="20dp"
+                    android:layout_below="@+id/createAccount1_et_phone"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/creatAccount1_linear_haveAnAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp">
+                <TextView
+                    android:id="@+id/creatAccount1_tv_haveAnAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already Have an account?"
+                    android:textSize="20sp"
+                    android:textColor="#111"
+                    android:layout_margin="10dp"
+                    />
+                <TextView
+                    android:id="@+id/createAccount1_tv_singIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:textSize="20sp"
+                    android:textColor="#FF4956"
+                    android:layout_margin="10dp"
+                    />
+        </LinearLayout>
+</RelativeLayout>

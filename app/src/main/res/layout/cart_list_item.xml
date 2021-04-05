@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingStart="10dp">
+
+
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cart_product"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#111"
+        android:textSize="20sp"
+        android:text="Product Name"
+        android:layout_toEndOf="@+id/product_img"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0057"
+        android:textSize="20sp"
+        android:text="$30.00"
+        android:layout_toEndOf="@+id/product_img"
+        android:layout_below="@+id/product_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="#FF4956"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
